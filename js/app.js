@@ -46,26 +46,17 @@ function populateSeq(seq){
   outputSeq.appendChild(para);
 };
 
-
+// Loop through each letter in the word
 function input(word){
-  for(letter in word){
-    matchChar(word[letter]);
-  }
+  // Call matchChar on each letter
+  word.forEach(letter => matchChar(letter))
 };
 
 
 // Find the character in the alphabet
 function matchChar(char){
-  let y = alphabet.length - 1;
-  while(y >= 0){
-    if(char === alphabet[y].letter){
-      // Pass character sequence
-      populateSeq(alphabet[y].seq)
-      y = -1;
-    } else {
-      y -= 1;
-    }
-}
+  let matchedCharacter = alphabet.filter(x => x.letter === char)
+  populateSeq(matchedCharacter[0].seq)
 };
 
 let output = document.getElementById("transButton").addEventListener("click", function( event ) {
