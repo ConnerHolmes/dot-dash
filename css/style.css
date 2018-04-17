@@ -61,7 +61,7 @@ p::selection {
   justify-content: center; }
 
 .word p {
-  color: #757575;
+  color: #000;
   font-size: 64px;
   margin: 0px;
   padding: 0px 65px; }
