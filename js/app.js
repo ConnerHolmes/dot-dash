@@ -49,14 +49,14 @@ function populateSeq(seq){
 // Loop through each letter in the word
 function input(word){
   // Call matchChar on each letter
-  word.forEach(letter => matchChar(letter))
+  word.forEach(letter => matchChar(letter));
 };
 
 
 // Find the character in the alphabet
 function matchChar(char){
-  let matchedCharacter = alphabet.filter(x => x.letter === char)
-  populateSeq(matchedCharacter[0].seq)
+  let matchedCharacter = alphabet.filter(x => x.letter === char);
+  populateSeq(matchedCharacter[0].seq);
 };
 
 let output = document.getElementById("transButton").addEventListener("click", function( event ) {
